@@ -1,0 +1,38 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.NextClientNumber
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>NextClientNumber</legend>
+
+        @Html.HiddenFor(model => model.NextClientNumberId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NextAvailableNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NextAvailableNumber)
+            @Html.ValidationMessageFor(model => model.NextAvailableNumber)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

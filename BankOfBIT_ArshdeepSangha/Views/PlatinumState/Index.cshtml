@@ -1,0 +1,44 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.PlatinumState
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PlatinumState</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LowerLimit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LowerLimit)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpperLimit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpperLimit)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AccountStateId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

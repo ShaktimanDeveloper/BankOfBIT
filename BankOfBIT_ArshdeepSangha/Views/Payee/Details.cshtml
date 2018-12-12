@@ -1,0 +1,23 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.Payee
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Payee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PayeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

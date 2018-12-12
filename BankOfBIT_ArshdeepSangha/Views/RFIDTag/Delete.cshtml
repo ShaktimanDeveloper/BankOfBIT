@@ -1,0 +1,33 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.RFIDTag
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>RFIDTag</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CardNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CardNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Client.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client.FullName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

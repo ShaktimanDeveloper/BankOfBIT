@@ -1,0 +1,23 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.NextTransactionNumber
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>NextTransactionNumber</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NextAvailableNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NextAvailableNumber)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.NextTransactionNumberId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

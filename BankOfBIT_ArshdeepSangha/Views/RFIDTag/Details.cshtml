@@ -1,0 +1,30 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.RFIDTag
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>RFIDTag</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CardNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CardNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Client.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client.FullName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RFIDTagId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

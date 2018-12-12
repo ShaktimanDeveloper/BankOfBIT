@@ -1,0 +1,46 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.TransactionType
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TransactionType</legend>
+
+        @Html.HiddenFor(model => model.TransactionTypeId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ServiceCharges)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ServiceCharges)
+            @Html.ValidationMessageFor(model => model.ServiceCharges)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

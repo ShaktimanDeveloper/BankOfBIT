@@ -1,0 +1,26 @@
+﻿@*Edited this file for matching requirements*@
+
+@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        The Bank of BIT Online Banking Application allows clients to access and update bank data from the convenience of the Internet
+    </p>
+
+</article>
+
+<aside>
+    <h3>Navigation</h3>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

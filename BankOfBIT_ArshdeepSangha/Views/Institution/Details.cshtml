@@ -1,0 +1,30 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.Institution
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Institution</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstitutionNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstitutionNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.InstitutionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

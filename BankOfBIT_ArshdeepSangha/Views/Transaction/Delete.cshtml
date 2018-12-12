@@ -1,0 +1,68 @@
+﻿@model BankOfBIT_ArshdeepSangha.Models.Transaction
+@*Modifed File according to assignment specification
+@{*@
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Transaction</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TransactionNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransactionNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BankAccount.Notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BankAccount.Notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TransactionType.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransactionType.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Deposit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Deposit)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Withdrawal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Withdrawal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Notes)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
